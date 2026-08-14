@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 558462673040880102}
   m_Layer: 0
   m_Name: pipe-green_0
-  m_TagString: Untagged
+  m_TagString: Obstical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 3721016757774304969}
   m_Layer: 0
   m_Name: pipe-green_0 (1)
-  m_TagString: Untagged
+  m_TagString: Obstical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365424943765678121}
   - component: {fileID: 3399290532146723980}
+  - component: {fileID: 5307627192617377943}
   m_Layer: 0
   m_Name: pointCollider
   m_TagString: Untagged
@@ -404,3 +405,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 3.5}
   m_EdgeRadius: 0
+--- !u!114 &5307627192617377943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5033017658958029369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cb0060286866f46b948b8d9e9de3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerScore
+  Logic: {fileID: 0}
+  obj:
+  - {fileID: 487967715128339107}
+  - {fileID: 3870012613677968401}
