@@ -37,4 +37,11 @@ public class scoremantener : MonoBehaviour
         gameoverscreen.SetActive(true);
         Time.timeScale=0f;
     }
+
+    public void Mainmenus( string scenenameManu)
+    {
+        
+        SceneManager.LoadScene(scenenameManu);
+        Time.timeScale=1f;
+    }
 }

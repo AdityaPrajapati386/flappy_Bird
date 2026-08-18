@@ -9,7 +9,13 @@ public class player_movement : MonoBehaviour
     [SerializeField]int upforce;
   
     [SerializeField] scoremantener Logic;
+//----------------------------------------------------
 
+    [Header("Audio settings")]
+    [SerializeField] AudioSource audioSource;   
+    [SerializeField] AudioClip jumpSound;
+    [SerializeField] AudioClip scoreSound;
+    [SerializeField] AudioClip gameOverSound;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,18 +33,20 @@ public class player_movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            audioSource.PlayOneShot(jumpSound);
              rigid.linearVelocity=Vector2.up*upforce;
         }   
     }
 
        void OnCollisionEnter2D(Collision2D collision)
     {
-            Logic.Gameend();
+        audioSource.PlayOneShot(gameOverSound);       
+        Logic.Gameend();
     }
 
      void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        audioSource.PlayOneShot(scoreSound);       
         Logic.AddScore();
     }
 }
